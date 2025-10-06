@@ -152,13 +152,15 @@ public:
 
 	void remove_duplicates() {
 
-		Node* tmp = head;
-		Node* next = head->next;
 
 		if (head == nullptr || head->next == nullptr) {
 			std::cout << "Not delete" << std::endl;
 			return;
 		}
+
+		Node* tmp = head;
+		Node* next = head->next;
+
 
 
 		while (next != nullptr) {
