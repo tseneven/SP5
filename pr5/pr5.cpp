@@ -68,8 +68,6 @@ public:
 		}
 		head->next->prev = nullptr;
 		head = head->next;
-
-
 	}
 
 	void pop_back() {
@@ -188,7 +186,7 @@ int main()
 {
 	DoublyLinkedList list = {};
 
-	short action;
+	short action = 0;
 
 	while (true) {
 		std::cout << "Enter action" << std::endl;
@@ -201,21 +199,23 @@ int main()
 		std::cout << "7 - delete duplicates" << std::endl;
 		std::cout << "8 - exit" << std::endl;
 
+		std::cin >> action;
+
 
 
 		switch (action) {
 			case 1:
+				int n;
 				std::cout << "enter element" << std::endl;
-				short n;
 				std::cin >> n;
 				list.push_front(n);
 				break;
 
 			case 2: 
+				int m;
 				std::cout << "enter element" << std::endl;
-				short n;
-				std::cin >> n;
-				list.push_back(n);
+				std::cin >> m;
+				list.push_back(m);
 				break;
 			case 3:
 				list.pop_front();
